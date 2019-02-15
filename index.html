@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>首页</title>
+    <link rel="stylesheet" href="asset/admin/page/css/login.css">
+    <link rel="stylesheet" href="asset/plugin/bootstrap-3.3.7/css/bootstrap.css">
+    <link rel="stylesheet" href="asset/plugin/font-awesome-4.7.0/css/font-awesome.css">
+    <link rel="stylesheet" href="asset/plugin/simple-line-icons/simple-line-icons.min.css">
+    <link rel="stylesheet" href="asset/plugin/uniform/css/uniform.default.css">
+
+    <link rel="stylesheet" href="asset/css/component.css">
+    <link rel="stylesheet" href="asset/css/plugin.css">
+    <link rel="stylesheet" href="asset/admin/layout/css/layout.css">
+    <link rel="stylesheet" href="asset/admin/layout/css/themes/darkblue.css">
+</head>
+<body class="page-header-fixed page-quick-sidebar-over-content">
+<!-- BEGIN HEADER -->
+<div class="page-header navbar navbar-fixed-top">
+    <!-- BEGIN HEADER INNER -->
+    <div class="page-header-inner">
+        <!-- BEGIN LOGO -->
+        <div class="page-logo">
+
+            <h4 style="color:#fff"><b>DYL 后台管理系统</b></h4>
+
+            <div class="menu-toggler sidebar-toggler hide">
+                <!-- DOC: Remove the above "hide" to enable the sidebar toggler button on header -->
+            </div>
+        </div>
+        <!-- END LOGO -->
+        <!-- BEGIN RESPONSIVE MENU TOGGLER -->
+        <a href="javascript:;" class="menu-toggler responsive-toggler" data-toggle="collapse"
+           data-target=".navbar-collapse"></a>
+        <!-- END RESPONSIVE MENU TOGGLER -->
+        <!-- BEGIN TOP NAVIGATION MENU -->
+        <div class="top-menu">
+            <ul class="nav navbar-nav pull-right">
+                <!-- BEGIN NOTIFICATION DROPDOWN -->
+                <li class="dropdown dropdown-extended dropdown-tasks" id="header_task_bar">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                       data-close-others="true">
+                        <i class="icon-settings"></i> 设置
+                    </a>
+                </li>
+
+                <!-- BEGIN USER LOGIN DROPDOWN -->
+                <li class="dropdown dropdown-user">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" data-hover="dropdown"
+                       data-close-others="true">
+                        <img alt="#" class="img-circle"
+                             src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC4AAAAuCAMAAABgZ9sFAAAAVFBMVEXx8fHMzMzr6+vn5+fv7+/t7e3d3d2+vr7W1tbHx8eysrKdnZ3p6enk5OTR0dG7u7u3t7ejo6PY2Njh4eHf39/T09PExMSvr6+goKCqqqqnp6e4uLgcLY/OAAAAnklEQVRIx+3RSRLDIAxE0QYhAbGZPNu5/z0zrXHiqiz5W72FqhqtVuuXAl3iOV7iPV/iSsAqZa9BS7YOmMXnNNX4TWGxRMn3R6SxRNgy0bzXOW8EBO8SAClsPdB3psqlvG+Lw7ONXg/pTld52BjgSSkA3PV2OOemjIDcZQWgVvONw60q7sIpR38EnHPSMDQ4MjDjLPozhAkGrVbr/z0ANjAF4AcbXmYAAAAASUVORK5CYII="/>
+                        <span class="username username-hide-on-mobile">admin</span>
+                        <i class="fa fa-angle-down"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li>
+                            <a href="http://47.99.204.200:1990/account/edit">
+                                <i class="icon-user"></i>我的信息
+                            </a>
+                        </li>
+                        <li>
+                            <a href="javascript:void(0)" onclick="window.sign_out();">
+                                <i class="icon-key"></i>注销 </a>
+                        </li>
+                    </ul>
+                </li>
+
+            </ul>
+        </div>
+        <!-- END TOP NAVIGATION MENU -->
+    </div>
+    <!-- END HEADER INNER -->
+</div>
+<!-- END HEADER -->
+<div class="clearfix">
+</div>
+
+<!-- BEGIN CONTAINER -->
+<div class="page-container">
+    <!-- BEGIN SIDEBAR -->
+    <div class="page-sidebar-wrapper">
+        <div class="page-sidebar navbar-collapse collapse">
+            <!-- BEGIN SIDEBAR MENU -->
+            <ul class="page-sidebar-menu " data-auto-scroll="true" data-slide-speed="200">
+                <!-- DOC: To remove the sidebar toggler from the sidebar you just need to completely remove the below "sidebar-toggler-wrapper" LI element -->
+                <li class="sidebar-toggler-wrapper">
+                    <!-- BEGIN SIDEBAR TOGGLER BUTTON -->
+                    <div class="sidebar-toggler">
+                    </div>
+                    <!-- END SIDEBAR TOGGLER BUTTON -->
+                </li>
+                <!-- DOC: To remove the search box from the sidebar you just need to completely remove the below "sidebar-search-wrapper" LI element -->
+                <li class="sidebar-search-wrapper">
+                    <!-- BEGIN RESPONSIVE QUICK SEARCH FORM -->
+                    <!-- DOC: Apply "sidebar-search-bordered" class the below search form to have bordered search box -->
+                    <!-- DOC: Apply "sidebar-search-bordered sidebar-search-solid" class the below search form to have bordered & solid search box -->
+                    <form class="sidebar-search " action="#" method="POST">
+                        <a href="javascript:;" class="remove">
+                            <i class="icon-close"></i>
+                        </a>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search...">
+                            <span class="input-group-btn">
+				<a href="javascript:;" class="btn submit"><i class="icon-magnifier"></i></a>
+			</span>
+                        </div>
+                    </form>
+                    <!-- END RESPONSIVE QUICK SEARCH FORM -->
+                </li>
+                <li class="">
+                    <a href="http://47.99.204.200:1990/">
+                        <i class="icon-home"></i>
+                        <span class="title">销售数据</span>
+                    </a>
+
+                </li>
+                <li class="active open">
+                    <a href="http://47.99.204.200:1990/employees/app/index">
+                        <i class="fa fa-cogs"></i>
+                        <span class="title">应用管理</span>
+                        <span class="arrow open"></span>
+                    </a>
+
+                    <ul class="sub-menu">
+                        <li class="active">
+                            <a href="http://47.99.204.200:1990/employees/app/index">
+                                <i class="icon-lock"></i>
+                                我的应用 </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="http://47.99.204.200:1990/orders/home/index">
+                        <i class="fa fa-recycle"></i>
+                        <span class="title">订单管理</span>
+                        <span class="arrow "></span>
+                    </a>
+
+                    <ul class="sub-menu">
+                        <li class="">
+                            <a href="http://47.99.204.200:1990/orders/home/index">
+                                <i class="icon-list"></i>
+                                订单列表 </a>
+                        </li>
+                        <li class="">
+                            <a href="http://47.99.204.200:1990/employees/cost/index">
+                                <i class="fa fa-info-circle"></i>
+                                收入记录 </a>
+                        </li>
+                        <li class="">
+                            <a href="http://47.99.204.200:1990/users/withdraw/index">
+                                <i class="fa fa-money"></i>
+                                提现管理 </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="http://47.99.204.200:1990/account/edit">
+                        <i class="fa fa-user"></i>
+                        <span class="title">我的信息</span>
+                        <span class="arrow "></span>
+                    </a>
+
+                    <ul class="sub-menu">
+                        <li class="">
+                            <a href="http://47.99.204.200:1990/account/edit">
+                                <i class="fa fa-info-circle"></i>
+                                基本信息 </a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="">
+                    <a href="http://47.99.204.200:1990/home/help">
+                        <i class="icon-settings"></i>
+                        <span class="title">API文档</span>
+                    </a>
+
+                </li>
+            </ul>
+            <!-- END SIDEBAR MENU -->
+        </div>
+    </div>
+    <!-- END SIDEBAR -->
+
+    <!-- BEGIN CONTENT -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+            <!-- BEGIN PAGE HEADER-->
+            <h3 class="page-title">应用管理</h3>
+            <div class="page-bar">
+                <ul class="page-breadcrumb">
+                    <li>
+                        <i class="fa fa-home"></i>
+                        <a href="/">首页</a>
+                        <i class="fa fa-angle-right"></i>
+                    </li>
+                    <li>
+                        <a href="#">我的应用 </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="portlet box grey-cascade">
+                        <div class="portlet-title">
+                            <div class="caption">
+                                <i class="fa fa-globe"></i>应用管理
+                            </div>
+                        </div>
+                        <div class="portlet-body">
+                            <div class="table-toolbar">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="btn-group">
+                                            <a href="javascript:void(0);" onclick="window.view.add();"
+                                               class="btn green"> 创建应用<i class="fa fa-plus"></i> </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <form>
+                                <table class="table table-striped table-bordered table-hover">
+                                    <thead>
+                                    <tr class="heading">
+                                        <th>应用名称</th>
+                                        <th>操作</th>
+                                    </tr>
+                                    <tr class="filter">
+                                        <td><input type="text" id="search-keywords" class="form-control" value=""/></td>
+                                        <td>
+                                            <div class="margin-bottom-5">
+                                                <button type="reset" class="btn btn-sm btn-default filter-cancel"><i
+                                                        class="fa fa-times"></i>重置
+                                                </button>
+                                                <button onclick="window.view.search(1);" type="button"
+                                                        class="btn btn-sm btn-success filter-submit margin-bottom"><i
+                                                        class="fa fa-search"></i>搜索
+                                                </button>
+                                            </div>
+
+                                        </td>
+                                    </tr>
+                                    </thead>
+                                </table>
+                            </form>
+                            <table class="table table-striped table-bordered table-hover">
+                                <thead>
+                                <tr class="heading">
+                                    <th>
+                                        名称
+                                    </th>
+
+                                    <th>
+                                        AppID
+                                    </th>
+                                    <th>
+                                        AppSecret
+                                    </th>
+                                    <th>
+                                        状态
+                                    </th>
+
+                                    <th>
+                                        创建时间
+                                    </th>
+                                    <th>
+                                        操作
+                                    </th>
+                                </tr>
+                                </thead>
+                                <tbody id="container">
+
+                                </tbody>
+                            </table>
+
+                            <div class="row">
+                                <div class="col-md-5 col-sm-12">
+                                    <div class="dataTables_info" id="paging-info">
+
+                                    </div>
+                                </div>
+                                <div class="col-md-7 col-sm-12">
+                                    <div class="ddataTables_paginate paging_bootstrap_full_number">
+                                        <ul class="pagination" id="paging"></ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- model -->
+                        </div>
+                    </div>
+                    <!-- End: life time stats -->
+                </div>
+            </div>
+            <!-- END PAGE CONTENT-->
+        </div>
+    </div>
+    <!-- END CONTENT -->
+</div>
+<!-- END CONTAINER -->
+
+<!-- BEGIN FOOTER -->
+<div class="page-footer">
+    <div class="page-footer-inner text-center">
+        2019 &copy; 帝一流
+    </div>
+    <div class="page-footer-tools">
+			<span class="go-top">
+				<i class="fa fa-angle-up"></i>
+			</span>
+    </div>
+</div>
+<!-- END FOOTER -->
+
+<script src="asset/js/jquery-1.11.0.min.js"></script>
+<script src="asset/plugin/bootstrap-3.3.7/js/bootstrap.js"></script>
+<script src="asset/plugin/uniform/jquery.uniform.min.js"></script>
+<script src="asset/plugin/jquery-slimscroll/jquery.slimscroll.min.js"></script>
+
+<script src="asset/js/metronic.js"></script>
+<script src="asset/admin/layout/js/layout.js"></script>
+<script src="asset/admin/layout/js/demo.js"></script>
+<script src="asset/admin/layout/js/quick-sidebar.js"></script>
+
+<script>
+    $(function () {
+        // initiate layout and plugins
+        Metronic.init(); // init metronic core components
+        Layout.init(); // init current layout
+        QuickSidebar.init(); // init quick sidebar
+        Demo.init(); // init demo features
+    });
+</script>
+</body>
+</html>
